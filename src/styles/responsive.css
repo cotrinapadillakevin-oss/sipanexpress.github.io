@@ -1,0 +1,155 @@
+/**
+ * RESPONSIVE BREAKPOINTS - TURISMO SIPÁN EXPRESS
+ */
+
+/* Desktops and small screens <= 1100px */
+@media (max-width: 1100px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets <= 992px */
+@media (max-width: 992px) {
+  .nav-menu {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    background: rgba(10, 25, 47, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2.5rem 2rem;
+    gap: 1.5rem;
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    overflow-y: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-menu.mobile-open {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 0;
+  }
+
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-actions .btn-gold {
+    display: none;
+  }
+
+  .nav-menu .mobile-cta-wrap {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-highlights-strip {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Mobile Phones <= 640px */
+@media (max-width: 640px) {
+  :root {
+    --nav-height: 70px;
+  }
+
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .container {
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-card,
+  .contact-form-card {
+    padding: 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .floating-whatsapp {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .floating-whatsapp-tooltip {
+    display: none;
+  }
+
+  .lightbox-content {
+    margin: 1rem;
+  }
+
+  .lightbox-nav-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .lightbox-prev { left: 0.5rem; }
+  .lightbox-next { right: 0.5rem; }
+}

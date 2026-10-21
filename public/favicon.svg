@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="sipanGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#E5A93C" />
+    </linearGradient>
+    <linearGradient id="sipanNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1b3d" />
+      <stop offset="100%" stop-color="#1b3b6f" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#sipanNavy)" />
+  <!-- Stylized Bus Body -->
+  <path d="M16 20C16 16.6863 18.6863 14 22 14H42C45.3137 14 48 16.6863 48 20V39C48 41.2091 46.2091 43 44 43H20C17.7909 43 16 41.2091 16 39V20Z" fill="url(#sipanGold)" />
+  <!-- Windshield -->
+  <path d="M19 18H45V27C45 28.1046 44.1046 29 43 29H21C19.8954 29 19 28.1046 19 27V18Z" fill="#0b1b3d" />
+  <!-- Headlights -->
+  <circle cx="21" cy="36" r="2.5" fill="#FFFFFF" />
+  <circle cx="43" cy="36" r="2.5" fill="#FFFFFF" />
+  <!-- Grille lines -->
+  <line x1="26" y1="35" x2="38" y2="35" stroke="#0b1b3d" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="28" y1="38" x2="36" y2="38" stroke="#0b1b3d" stroke-width="1.5" stroke-linecap="round" />
+  <!-- Wheels -->
+  <circle cx="21" cy="44" r="3.5" fill="#1e293b" stroke="#D4AF37" stroke-width="1.5" />
+  <circle cx="43" cy="44" r="3.5" fill="#1e293b" stroke="#D4AF37" stroke-width="1.5" />
+</svg>

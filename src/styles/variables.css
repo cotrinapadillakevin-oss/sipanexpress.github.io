@@ -1,0 +1,93 @@
+/**
+ * DESIGN SYSTEM TOKENS - TURISMO SIPÁN EXPRESS
+ * ============================================
+ * Paleta de colores inspirada en la nobleza moche (Oro Sipán)
+ * y la costa del norte peruano (Azul Profundo del Pacífico).
+ */
+
+:root {
+  /* Brand Primary - Deep Regal Navy */
+  --color-primary-950: #050d1a;
+  --color-primary-900: #0a192f;
+  --color-primary-850: #0e223f;
+  --color-primary-800: #132b4f;
+  --color-primary-700: #1c3d6e;
+  --color-primary-600: #255294;
+  --color-primary-500: #3168b8;
+
+  /* Brand Accent - Royal Sipán Gold */
+  --color-gold-900: #7a5f11;
+  --color-gold-700: #a98319;
+  --color-gold-600: #c59b27;
+  --color-gold-500: #d4af37;
+  --color-gold-400: #e2c04d;
+  --color-gold-300: #f0d575;
+  --color-gold-100: #fbf5df;
+
+  /* Brand Coastal Turquoise - Northern Sea */
+  --color-coastal-600: #026875;
+  --color-coastal-500: #028090;
+  --color-coastal-400: #00a896;
+  --color-coastal-300: #05bca7;
+
+  /* Brand Vibrant Orange (Movilbus Style) */
+  --color-movil-orange: #FF5500;
+  --color-movil-orange-hover: #E64A00;
+  --color-movil-orange-light: #FFF0EB;
+
+  /* WhatsApp Brand Color */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #20ba59;
+
+  /* Neutrals & Surfaces */
+  --color-bg-main: #f8fafc;
+  --color-bg-card: #ffffff;
+  --color-bg-alt: #f1f5f9;
+  --color-bg-dark: #0a192f;
+  --color-bg-darker: #050d1a;
+  
+  --color-text-main: #1e293b;
+  --color-text-muted: #64748b;
+  --color-text-light: #94a3b8;
+  --color-text-inverse: #f8fafc;
+  --color-text-gold: #c59b27;
+
+  /* Borders & Dividers */
+  --color-border: #e2e8f0;
+  --color-border-dark: rgba(255, 255, 255, 0.12);
+  --color-border-gold: rgba(212, 175, 55, 0.35);
+
+  /* Status Colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+
+  /* Typography */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.09), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.06);
+  --shadow-2xl: 0 25px 50px -12px rgba(10, 25, 47, 0.25);
+  --shadow-gold: 0 10px 25px -5px rgba(212, 175, 55, 0.3);
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Spacing */
+  --container-max-width: 1280px;
+  --nav-height: 80px;
+}
