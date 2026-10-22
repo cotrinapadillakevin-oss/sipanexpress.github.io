@@ -27,7 +27,7 @@ export const HeroQuoteBar = () => {
 📅 *Fecha Salida:* ${departureDate}
 ${returnDate ? `🔄 *Fecha Retorno:* ${returnDate}\n` : ''}👥 *N° Pasajeros / Unidad:* ${passengers}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
-¡Hola Don Lucho Mena! Deseo consultar cotización y disponibilidad para este servicio.`;
+¡Hola Turismo Sipán Express! Deseo consultar cotización y disponibilidad para este servicio.`;
 
     const whatsappUrl = `https://wa.me/${companyInfo.contact.whatsappNumber}?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');

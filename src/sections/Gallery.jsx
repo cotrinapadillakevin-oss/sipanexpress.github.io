@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ZoomIn, Camera, X, ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
 import { galleryItems, galleryCategories } from '../data/gallery';
 import { companyInfo } from '../data/companyInfo';
+import { getAssetUrl } from '../utils/assets';
 
 export const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState('todos');
@@ -14,14 +15,26 @@ export const Gallery = () => {
   const currentItem = lightboxIndex !== null ? filteredItems[lightboxIndex] : null;
 
   const handlePrev = (e) => {
-    e.stopPropagation();
+    if (e && e.stopPropagation) e.stopPropagation();
     setLightboxIndex((prev) => (prev > 0 ? prev - 1 : filteredItems.length - 1));
   };
 
   const handleNext = (e) => {
-    e.stopPropagation();
+    if (e && e.stopPropagation) e.stopPropagation();
     setLightboxIndex((prev) => (prev < filteredItems.length - 1 ? prev + 1 : 0));
   };
+
+  // Keyboard navigation for Lightbox
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (lightboxIndex === null) return;
+      if (e.key === 'Escape') setLightboxIndex(null);
+      if (e.key === 'ArrowLeft') handlePrev(e);
+      if (e.key === 'ArrowRight') handleNext(e);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lightboxIndex, filteredItems.length]);
 
   return (
     <div className="spa-screen-container">
@@ -63,7 +76,7 @@ export const Gallery = () => {
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && setLightboxIndex(idx)}
             >
-              <img src={item.image} alt={item.title} loading="lazy" />
+              <img src={getAssetUrl(item.image)} alt={item.title} loading="lazy" />
               <div className="gallery-spa-overlay">
                 <span className="gallery-spa-cat">{item.categoryLabel}</span>
                 <h4 className="gallery-spa-title">{item.title}</h4>
@@ -98,7 +111,7 @@ export const Gallery = () => {
           </button>
 
           <div className="lightbox-content-wrap" onClick={(e) => e.stopPropagation()}>
-            <img src={currentItem.image} alt={currentItem.title} className="lightbox-img" />
+            <img src={getAssetUrl(currentItem.image)} alt={currentItem.title} className="lightbox-img" />
             <div className="lightbox-caption">
               <span className="lightbox-badge">{currentItem.categoryLabel}</span>
               <h3 className="lightbox-title">{currentItem.title}</h3>

@@ -14,6 +14,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { companyInfo } from '../data/companyInfo';
+import { getAssetUrl } from '../utils/assets';
 
 export const Fleet = ({ onSelectVehicle }) => {
   const [selectedVehicleId, setSelectedVehicleId] = useState(vehicles[0].id);
@@ -79,7 +80,7 @@ export const Fleet = ({ onSelectVehicle }) => {
           <div className="fleet-visual-column">
             <div className="fleet-main-image-wrap">
               <img
-                src={activeImage}
+                src={getAssetUrl(activeImage)}
                 alt={`${activeVehicle.name} - Turismo Sipán Express`}
                 className="fleet-main-img"
               />
@@ -102,7 +103,7 @@ export const Fleet = ({ onSelectVehicle }) => {
                       onClick={() => setActiveImage(img)}
                       aria-label={`Ver ángulo ${idx + 1}`}
                     >
-                      <img src={img} alt="" />
+                      <img src={getAssetUrl(img)} alt="" />
                     </button>
                   );
                 })}

@@ -13,6 +13,7 @@ import {
   ShieldCheck
 } from 'lucide-react';
 import { companyInfo } from '../data/companyInfo';
+import { getAssetUrl } from '../utils/assets';
 
 const serviceIcons = {
   'transporte-turistico': Landmark,
@@ -85,7 +86,7 @@ export const Services = ({ onSelectService, onNavigateToFleet }) => {
             <div className="service-detail-card">
               <div className="service-detail-image-wrap">
                 <img
-                  src={activeService.image}
+                  src={getAssetUrl(activeService.image)}
                   alt={activeService.title}
                   className="service-detail-img"
                 />

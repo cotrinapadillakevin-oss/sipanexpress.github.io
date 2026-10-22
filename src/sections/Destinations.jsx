@@ -14,6 +14,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { companyInfo } from '../data/companyInfo';
+import { getAssetUrl } from '../utils/assets';
 
 export const Destinations = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -92,7 +93,7 @@ export const Destinations = () => {
               onKeyDown={(e) => e.key === 'Enter' && setSelectedDestination(dest)}
             >
               <div className="dest-spa-img-wrap">
-                <img src={dest.image} alt={dest.name} loading="lazy" />
+                <img src={getAssetUrl(dest.image)} alt={dest.name} loading="lazy" />
                 <span className="dest-spa-category">{dest.category}</span>
               </div>
               <div className="dest-spa-info">
@@ -139,7 +140,7 @@ export const Destinations = () => {
             </button>
 
             <div className="dest-modal-image-wrap">
-              <img src={selectedDestination.image} alt={selectedDestination.name} />
+              <img src={getAssetUrl(selectedDestination.image)} alt={selectedDestination.name} />
               <div className="dest-modal-badge">
                 <Sparkles size={16} />
                 <span>{selectedDestination.category}</span>

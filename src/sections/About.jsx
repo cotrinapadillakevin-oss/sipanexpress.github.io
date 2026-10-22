@@ -1,6 +1,7 @@
 import React from 'react';
 import { Target, Compass, Award, Shield, Users, HeartHandshake, CheckCircle } from 'lucide-react';
 import { companyInfo } from '../data/companyInfo';
+import { getAssetUrl } from '../utils/assets';
 
 export const About = () => {
   const { about } = companyInfo;
@@ -21,7 +22,7 @@ export const About = () => {
           <div style={{ position: 'relative' }}>
             <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-xl)', border: '1px solid var(--color-border)' }}>
               <img
-                src="/images/fleet/van-toyota-hiace-sipan.jpg"
+                src={getAssetUrl('/images/fleet/van-toyota-hiace-sipan.jpg')}
                 alt="Van Turística Sipán Express en Museo Tumbas Reales de Sipán"
                 style={{ width: '100%', height: '380px', objectFit: 'cover' }}
               />

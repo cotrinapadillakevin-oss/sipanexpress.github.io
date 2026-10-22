@@ -11,6 +11,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import HeroQuoteBar from '../components/HeroQuoteBar';
+import { getAssetUrl } from '../utils/assets';
 
 export const Hero = ({ onNavigate }) => {
   const slides = [
@@ -99,7 +100,7 @@ export const Hero = ({ onNavigate }) => {
               className={`movil-hero-slide ${idx === currentSlide ? 'active' : ''}`}
             >
               <img
-                src={slide.image}
+                src={getAssetUrl(slide.image)}
                 alt={slide.alt}
                 style={{ objectPosition: slide.position }}
               />
