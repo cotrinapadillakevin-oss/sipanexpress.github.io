@@ -23,3 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 SUBIR_A_GITHUB.bat
+DESPLEGAR_VERCEL.bat
+.vercel
